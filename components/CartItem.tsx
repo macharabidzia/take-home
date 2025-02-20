@@ -14,7 +14,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
   };
 
   const handleQuantityChange = async (cartItemId: string, quantity: number) => {
-    if (quantity < item.product.availableQuantity) {
+    if (quantity <= item.product.availableQuantity) {
       return updateItemQuantity(cartItemId, quantity);
     }
   };
